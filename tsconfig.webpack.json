@@ -4,7 +4,6 @@
     "target": "ESNext",
     "sourceMap": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "jsx": "react",
     "paths": {
       "@assets/*": [
@@ -22,6 +21,9 @@
     }
   },
   "exclude": [
-    "node_modules"
+    "../node_modules",
+  ],
+  "include": [
+    "webpack.config.ts"
   ]
 }

@@ -1,5 +1,6 @@
 import path from "node:path";
 
+import {webpack} from "webpack";
 import type {Configuration as WebpackConfiguration} from "webpack";
 import type {Configuration as WebpackDevServerConfiguration} from "webpack-dev-server";
 
@@ -18,6 +19,10 @@ const config: WebpackConfiguration = {
    mode: "development",
 
    devServer,
+
+   cache: {
+      type: "filesystem",
+   },
 
    entry: "./src/index.tsx",
 
@@ -42,6 +47,7 @@ const config: WebpackConfiguration = {
             loader: "ts-loader",
             options: {
                transpileOnly: true,
+               configFile: "tsconfig.json",
             }
          },
 
@@ -72,8 +78,8 @@ const config: WebpackConfiguration = {
       extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
 
       alias: {
-        "@layouts": path.resolve(__dirname, "src", "layouts") ,
-         "@pages": path.resolve(__dirname, "src", "pages") ,
+         "@layouts": path.resolve(__dirname, "src", "layouts"),
+         "@pages": path.resolve(__dirname, "src", "pages"),
       },
 
       plugins: [

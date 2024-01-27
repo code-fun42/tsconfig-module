@@ -5,10 +5,15 @@ import MainLayout from "@layouts/Main";
 const AboutLazy = lazy(() => import("@pages/About"));
 
 function App() {
-   const [isAbout] = useState(false);
+   const [isAbout, setIsAbout] = useState(false);
+
+   function addAbout() {
+      setIsAbout(true);
+   }
 
    return (
       <MainLayout>
+         <button onClick={addAbout}>Добавить страницу About</button>
          <Home/>
          <Suspense fallback={<div>Loading...</div>}>
             {isAbout ?
