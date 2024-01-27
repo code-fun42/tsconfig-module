@@ -5,8 +5,8 @@
   "license": "MIT",
   "packageManager": "yarn@4.0.0",
   "scripts": {
-    "build": "npx webpack",
-    "serve": "npx webpack serve"
+    "build": "TS_NODE_PROJECT=\"tsconfig.webpack.json\" webpack",
+    "serve": "webpack serve"
   },
   "dependencies": {
     "react": "^18.2.0",
