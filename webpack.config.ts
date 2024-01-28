@@ -77,11 +77,6 @@ const config: WebpackConfiguration = {
    resolve: {
       extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
 
-      alias: {
-         "@layouts": path.resolve(__dirname, "src", "layouts"),
-         "@pages": path.resolve(__dirname, "src", "pages"),
-      },
-
       plugins: [
          new TsconfigPathsPlugin(),
       ]
