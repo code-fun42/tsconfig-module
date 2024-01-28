@@ -3,7 +3,7 @@
     "module": "CommonJS",
     "target": "ESNext",
     "moduleResolution": "NodeNext",
-    "sourceMap": true,
+    "sourceMap": false,
     "esModuleInterop": true,
     "jsx": "react",
     "paths": {
